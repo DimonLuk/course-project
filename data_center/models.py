@@ -55,7 +55,7 @@ class MotherBoard(AbstractComponent):
 
 
 class Computer(models.Model):
-    trunk = models.OneToOneField(Trunk, on_delete=models.CASCADE)
+    trunk = models.ForeignKey(Trunk, on_delete=models.CASCADE)
     mother_board = models.OneToOneField(MotherBoard, on_delete=models.CASCADE)
 
     def __str__(self):
