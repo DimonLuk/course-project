@@ -39,7 +39,7 @@ class MotherBoardFilter(admin.SimpleListFilter):
         test = self.value()
         if test:
             test = test.split(', ')
-            queryset = Computer.objects.filter(
+            queryset = queryset.filter(
                 mother_board__manufacturer=test[0],
                 mother_board__form_factor=test[1],
                 mother_board__socket=test[2])
@@ -63,7 +63,7 @@ class TrunkFilter(admin.SimpleListFilter):
         test = self.value()
         if test:
             test = test.split(', ')
-            queryset = Computer.objects.filter(
+            queryset = queryset.filter(
                 trunk__manufacturer=test[0],
                 trunk__form_factor=test[1],
                 trunk__trunk_type=test[2])
