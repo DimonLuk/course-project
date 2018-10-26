@@ -20,5 +20,5 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^$', TemplateView.as_view(template_name='kurs_project/spa.html')),
-    re_path(r'^data_center/', include('data_center.urls'))
+    re_path(r'^data_center/api/', include('data_center.urls'))
 ]
