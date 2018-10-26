@@ -24,6 +24,7 @@ class AbstractComponent(models.Model):
     serial_number = models.CharField(max_length=10)
     state = models.CharField(max_length=7, choices=COMPONENT_STATE,
                              default='working')
+    component_type = models.CharField(max_length=30)
 
     class Meta:
         abstract = True
